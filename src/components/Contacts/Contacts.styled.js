@@ -9,3 +9,7 @@ export const ContItem = styled.li`
     margin-bottom: 20px;
   }
 `;
+
+export const BtnDeleteContact = styled.button`
+  margin-left: 10px;
+`;

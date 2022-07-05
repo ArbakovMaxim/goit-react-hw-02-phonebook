@@ -2,9 +2,10 @@ import {
   ContWrapper,
   ContList,
   ContItem,
+  BtnDeleteContact,
 } from 'components/Contacts/Contacts.styled';
 
-export const Contacts = ({ contacts }) => {
+export const Contacts = ({ contacts, onDeleteContact }) => {
   return (
     <ContWrapper>
       <ContList>
@@ -12,6 +13,12 @@ export const Contacts = ({ contacts }) => {
           return (
             <ContItem key={contact.id}>
               {contact.name}: {contact.number}
+              <BtnDeleteContact
+                type="button"
+                onClick={() => onDeleteContact(contact.id)}
+              >
+                Delete
+              </BtnDeleteContact>
             </ContItem>
           );
         })}
