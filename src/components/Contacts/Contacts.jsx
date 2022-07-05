@@ -3,7 +3,7 @@ import {
   ContList,
   ContItem,
   BtnDeleteContact,
-} from 'components/Contacts/Contacts.styled';
+} from './Contacts.styled';
 
 export const Contacts = ({ contacts, onDeleteContact }) => {
   return (

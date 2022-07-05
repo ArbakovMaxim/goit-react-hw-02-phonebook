@@ -1,10 +1,10 @@
 import { nanoid } from 'nanoid';
 import { Component } from 'react';
 import { Container } from 'ui/Container.styled';
-import { Contacts } from './Contacts/Contacts';
-import { FormName } from './Form/Form';
-import { Section } from 'components/Section/Section';
-import { Filtr } from 'components/Filtr/Filtr';
+import { Contacts } from './components/Contacts/Contacts';
+import { FormName } from './components/Form/Form';
+import { Section } from 'ui/Section/Section';
+import { Filter } from 'components/Filter/Filter';
 
 export class App extends Component {
   state = {
@@ -65,7 +65,7 @@ export class App extends Component {
           <FormName addContact={this.addContact} />
         </Section>
         <Section title="Contacts">
-          <Filtr changeFilter={this.changeFilter} value={this.state.filter} />
+          <Filter changeFilter={this.changeFilter} value={this.state.filter} />
           <Contacts
             contacts={resyltFilter}
             onDeleteContact={this.deleteContact}
